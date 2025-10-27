@@ -26,7 +26,7 @@ USER_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
 if [ -z "$USER_HOME" ] || [ ! -d "$USER_HOME" ]; then
   echo "Error: Could not find the home directory for user '$SUDO_USER'."
    # Attempting a fallback method
-   if [ -d "/home/$SUDO_USER" ]; then
+   if [ -d "/home/$SUDO_USER/pp4-skadi" ]; then
        echo "Warning: Failed to find home directory via getent, but '/home/$SUDO_USER' exists. Attempting to use this path."
        USER_HOME="/home/$SUDO_USER/pp4-skadi"
    else
