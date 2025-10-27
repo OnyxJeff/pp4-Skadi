@@ -1,4 +1,4 @@
-# pp4-Skadi
+# pp4-skadi
 
 ![Build Status](https://github.com/OnyxJeff/pp4-Skadi/actions/workflows/build.yml/badge.svg)
 ![Maintenance](https://img.shields.io/maintenance/yes/2025.svg)
