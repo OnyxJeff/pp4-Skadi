@@ -27,7 +27,7 @@ if [ -z "$USER_HOME" ] || [ ! -d "$USER_HOME" ]; then
   echo "Error: Could not find the home directory for user '$SUDO_USER'."
    # Attempting a fallback method
    if [ -d "/home/$SUDO_USER/pp4-skadi" ]; then
-       echo "Warning: Failed to find home directory via getent, but '/home/$SUDO_USER' exists. Attempting to use this path."
+       echo "Warning: Failed to find home directory via getent, but '/home/$SUDO_USER/pp4-skadi' exists. Attempting to use this path."
        USER_HOME="/home/$SUDO_USER/pp4-skadi"
    else
        echo "Could not automatically determine the home directory for '$SUDO_USER'."
