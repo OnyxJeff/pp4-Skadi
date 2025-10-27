@@ -33,17 +33,17 @@ pp4-skadi/
 - Current RPi Services in production
   - Odin
     - **Pi-hole**: Blocks ads, trackers, and telemetry across the network.
-    - Dockprom
+    - **Dockprom**: Collects Docker and system metrics for monitoring and analysis.
   - Mimir
-    - Grafana 
-    - Dockprom
-    - UniFi Controller
-    - Uptime Kuma
-    - Ookla Internet SpeedTest
-    - Static-Site Generator (NGinx)
+    - **Grafana**: Visualizes metrics and analytics through customizable dashboards.
+    - **Dockprom**: Collects Docker and system metrics for monitoring and analysis.
+    - **UniFi Controller**: Manages UniFi network devices and monitors network performance.
+    - **Uptime Kuma**: Monitors website and service uptime with alerts on failures.
+    - **Ookla Internet SpeedTest**: Measures and logs internet connection speed and latency.
+    - **Static-Site Generator (NGinx)**: Serves pre-built static websites via a lightweight web server.
   - Loki
-    - Transmission Server
-    - Dockprom
+    - **Transmission Server**: Manages and downloads torrents with a web interface.
+    - **Dockprom**: Collects Docker and system metrics for monitoring and analysis.
 
 ---
 
