@@ -74,6 +74,8 @@ sudo ./setup_display_service.sh
   - Open the U6143_ssd1306/C/ssd1306_i2c.h file. You can modify the value of the IP_SWITCH variable to determine whether to display the IP address or custom information. (The custom IP address is displayed by default)
   ![Custom Display](images/custom_display.jpg)
 
+Note: I did rewrite the initial install script to be more repo friendly.
+
 ---
 
 ## 📦 Installing Docker Compose
@@ -116,6 +118,15 @@ docker compose version
 cd ~/pp4-skadi/dockprom
 docker compose up -d
 ```
+
+---
+
+## Acknowledgements
+
+This project uses or is inspired by the following repositories:
+
+- [U6143_ssd1306](https://github.com/UCTRONICS/U6143_ssd1306) – Provides the C display code used in the systemd service setup.
+- [Dockprom](https://github.com/stefanprodan/dockprom) – Used for Docker-based Prometheus monitoring and metrics collection.
 
 ---
 
