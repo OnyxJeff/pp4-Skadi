@@ -6,7 +6,7 @@
 ![GitHub release](https://img.shields.io/github/v/release/OnyxJeff/pp4-Skadi)
 ![Issues](https://img.shields.io/github/issues/OnyxJeff/pp4-Skadi)
 
-**pp4-Skadi** is the internal playground server for my homelab, hosted on a Raspberry Pi 4.
+**Skadi** is the internal playground server for my homelab, hosted on a Raspberry Pi 4.
 
 ## 📁 Repo Structure
 
@@ -32,7 +32,7 @@ pp4-skadi/
 
 - Current RPi Services in production
   - Odin
-    - PiHole
+    - **Pi-hole**: Blocks ads, trackers, and telemetry across the network.
     - Dockprom
   - Mimir
     - Grafana 
@@ -109,9 +109,7 @@ docker run hello-world
 docker compose version
 ```
 
----
-
-## Installing your first container(s)
+### Installing your first container(s)
 
 - Installing Dockprom (Prometheus Exporter)
 ```bash
