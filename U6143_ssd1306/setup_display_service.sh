@@ -6,6 +6,12 @@
 SERVICE_NAME="uctronics-display"
 SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
 REPO_NAME="U6143_ssd1306" # Name of the repository directory
+# Auto-detect the repo base directory from the script’s location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_BASE_DIR="$(dirname "$SCRIPT_DIR")"
+
+echo "Detected script directory: $SCRIPT_DIR"
+echo "Assuming repository base directory: $REPO_BASE_DIR"
 
 echo "--- UCTRONICS C Display Systemd Service Setup Script ---"
 
@@ -37,7 +43,6 @@ fi
 echo "Detected user invoking sudo as '$SUDO_USER', with home directory: $USER_HOME"
 
 # 3. Define paths
-REPO_BASE_DIR="$USER_HOME/$REPO_NAME"
 C_DIR="$REPO_BASE_DIR/C"      # Directory containing C source code and Makefile
 MAKEFILE_PATH="$C_DIR/Makefile"  # Full path to the Makefile
 EXECUTABLE_PATH="$C_DIR/display" # Path to the compiled executable
