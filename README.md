@@ -52,15 +52,15 @@ pp4-skadi/
 - Preparation
 
   - Install GIT (app used to download this repo onto your device)
-```bash
-sudo apt install git -y
-```
+  ```bash
+  sudo apt install git -y
+  ```
 
   - Download repo
-```bash
-cd
-git clone https://github.com/OnyxJeff/pp4-skadi.git
-```
+  ```bash
+  cd
+  git clone https://github.com/OnyxJeff/pp4-skadi.git
+  ```
 
 ```bash
 sudo raspi-config
