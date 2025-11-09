@@ -90,7 +90,32 @@ Note: I did rewrite the initial install script to be more repo friendly.
 
 ---
 
-## 📦 Updating and Installing Docker Compose
+## ⚠️ Updating the OS
+
+- Update and Upgrade the System via script:
+```bash
+cd ~/pp4-skadi/scripts
+chmod +x apt-get-autoupdater.sh
+sudo ./apt-get-autoupdater.sh
+```
+
+- Start CronJob (optional but recommended if doing headless/always on installation)
+```bash
+sudo crontab -e
+```
+
+  - add the following to the bottom of the document:
+  ```bash
+  # OS-Auto-Updater
+    00 01 * * 0 bash $HOME/pp4-skadi/scripts/apt-get-autoupdater.sh
+      # execute automatic update script and log every sunday at 01:00 am
+    50 00 1 * * /bin/bash -c 'cp $HOME/pp4-skadi/logs/apt-get-autoupdater.log $HOME/pp4-skadi/backup_logs/apt-get-autoupdater-$(date +\%Y\%m\%d).log'
+      # saves monthly version of "apt-get-autoupdater.log" on the 1st of every month at 00:50 am
+    51 00 1 * * rm -f $HOME/pp4-skadi/logs/apt-get-autoupdater.log
+      # deletes old weekly log on the 1st of every month at 00:51 am
+  ```
+
+## 📦 Installing Docker Compose
 
 - Update and Upgrade the System via script:
 ```bash
@@ -141,7 +166,7 @@ docker run hello-world
 docker compose version
 ```
 
-### Installing your first container(s)
+### 📝 Installing your first container(s)
 
 - Installing Dockprom (Prometheus Exporter)
 ```bash
